@@ -11,7 +11,18 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        HeadlineSliderWidget()
+        HeadlineSliderWidget(),
+        Padding(
+          padding: EdgeInsets.all(10),
+          child: Text(
+            "Top Channal",
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 17,
+            ),
+          ),
+        )
       ],
     );
   }
