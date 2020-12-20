@@ -85,7 +85,7 @@ class _HeadlineSliderWidgetState extends State<HeadlineSliderWidget> {
                   bottom: 30,
                   child: Container(
                     padding: EdgeInsets.only(left: 10, right: 10),
-                    width: 25,
+                    width: 250,
                     child: Column(
                       children: [
                         Text(
@@ -104,13 +104,13 @@ class _HeadlineSliderWidgetState extends State<HeadlineSliderWidget> {
                   bottom: 10,
                   left: 10,
                   child: Text(
-                    article.source.title,
+                    article.source.name != null ? article.source.name : "",
                     style: TextStyle(color: Colors.white54, fontSize: 9),
                   ),
                 ),
                 Positioned(
                   bottom: 10,
-                  left: 10,
+                  right: 10,
                   child: Text(
                     timeAgo(DateTime.parse(article.date)),
                     style: TextStyle(color: Colors.white54, fontSize: 9),
@@ -120,7 +120,7 @@ class _HeadlineSliderWidgetState extends State<HeadlineSliderWidget> {
               ],
             ),
           ),
-        ));
+        )).toList();
   }
 
   String timeAgo(DateTime date) {
