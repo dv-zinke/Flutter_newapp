@@ -1,31 +1,34 @@
 class SourceModel {
+  final String id;
   final String author;
   final String title;
   final String name;
-  final String description;
+  final String category;
   final String url;
   final String img;
   final String date;
-  final String content;
+  final String description;
 
   SourceModel(
+    this.id,
     this.author,
     this.title,
     this.name,
-    this.description,
+    this.category,
     this.url,
     this.img,
     this.date,
-    this.content,
+    this.description,
   );
 
   SourceModel.fromJson(Map<String, dynamic> json)
-      : author = json["author"],
+      : id = json["id"],
+        author = json["author"],
         title = json["title"],
         name = json["name"],
-        description = json["description"],
+        category = json["category"],
         url = json["url"],
         img = json["urlToImage"],
         date = json["publishedAt"],
-        content = json["content"];
+        description = json["description"];
 }
