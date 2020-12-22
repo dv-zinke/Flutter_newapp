@@ -4,6 +4,7 @@ import 'package:news_app/elements/error_element.dart';
 import 'package:news_app/elements/loader_element.dart';
 import 'package:news_app/model/source.dart';
 import 'package:news_app/model/source_response.dart';
+import 'package:news_app/screens/source_detail.dart';
 
 class TopChannels extends StatefulWidget {
   @override
@@ -56,7 +57,9 @@ class _TopChannelsState extends State<TopChannels> {
               padding: EdgeInsets.only(top: 10),
               width: 80,
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => SourceDetail(source: sources[index],)));
+                },
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -77,7 +80,7 @@ class _TopChannelsState extends State<TopChannels> {
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage(
-                                    "assets/logos/${sources[index].id}.png"))),
+                                    "assets/img/placeholder.jpg"))),
                       ),
                     ),
                     SizedBox(
