@@ -55,7 +55,7 @@ class _NewsDetailState extends State<NewsDetail> {
               aspectRatio: 16 / 9,
               child: FadeInImage.assetNetwork(
                 placeholder: 'assets/img/placeholder.jpg',
-                image: article.img,
+                image: article.img == null ? "https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img-4.jpg" : article.img,
                 fit: BoxFit.cover,
               ),
             ),
